@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <style>
+        body{
+            background-color: black;
+            text-align: center;
+        }
+        #titulo{
+            color: rgb(157, 255, 255);
+        }
+        #op{
+            padding: 20px;
+            display: inline-block;
+            padding-left: auto;
+            padding-right: auto;
+        }
+        #res{
+            color: aqua;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="titulo">
+        <h1>Calculadora</h1>
+        <h2>Insira os números e selecione a operação</h2>
+    </div>
+
+    <div id="inputs">
+        <input type="number" id="n1" placeholder="Número 1">
+        <input type="number" id="n2" placeholder="Número 2">
+    </div>
+
+    <div id="op">
+        <button id="soma" onclick="somar()">soma</button>
+        <button id="sub" onclick="subtrair()">subtração</button>
+        <button id="mult" onclick="multiplicar()">multiplicação</button>
+        <button id="div" onclick="dividir()">divisão</button>
+    </div>
+    
+    <div id="res">
+        O reusltado aparecerá aqui
+    </div>
+    <script>
+        // var entr1 = window.document.getElementById("n1")
+        // var entr2 = window.document.getElementById("n2")
+        // var numero1 = Number(entr1.value)
+        // var numero2 = Number(entr2.value)
+        // var result = window.document.getElementById('res')
+        // // window.document.getElementById('soma').addEventListener('click', somar)
+        // var resSoma = numero1 + numero2
+        // window.document.querySelector('button#sub').addEventListener('click', subtr)
+        // window.document.querySelector('button#mult').addEventListener('click', multiplica)
+        // window.document.querySelector('button#div').addEventListener('click', div)
+
+        function somar(){
+            var entr1 = window.document.getElementById("n1")
+            var entr2 = window.document.getElementById("n2")
+            var numero1 = Number(entr1.value)
+            var numero2 = Number(entr2.value)
+            var result = window.document.getElementById('res')
+            var resSoma = numero1 + numero2
+            result.innerText = `A soma entre ${numero1} e ${numero2} é ${resSoma}`
+        }
+
+        function subtrair(){
+            var entr1 = window.document.getElementById("n1")
+            var entr2 = window.document.getElementById("n2")
+            var numero1 = Number(entr1.value)
+            var numero2 = Number(entr2.value)
+            var result = window.document.getElementById('res')
+            var resSoma = numero1 - numero2
+            result.innerText = `A subtração entre ${numero1} e ${numero2} é ${resSoma}`
+        }
+
+        function multiplicar(){
+            var entr1 = window.document.getElementById("n1")
+            var entr2 = window.document.getElementById("n2")
+            var numero1 = Number(entr1.value)
+            var numero2 = Number(entr2.value)
+            var result = window.document.getElementById('res')
+            var resSoma = numero1 * numero2
+            result.innerText = `A multiplicação entre ${numero1} e ${numero2} é ${resSoma}`
+        }
+
+        function dividir(){
+            var entr1 = window.document.getElementById("n1")
+            var entr2 = window.document.getElementById("n2")
+            var numero1 = Number(entr1.value)
+            var numero2 = Number(entr2.value)
+            var result = window.document.getElementById('res')
+            var resSoma = numero1 / numero2
+            result.innerText = `A divisão entre ${numero1} e ${numero2} é ${resSoma}`
+        }
+    </script>
+</body>
+</html>
